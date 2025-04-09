@@ -1,0 +1,141 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Visualizer</title>
+  <link rel="stylesheet" href="queue.css">
+</head>
+<body>
+  <div class="container">
+    <div class="visualizer">
+      <h1>QUEUE OPERATIONS</h1>
+      <h3>QUEUE SIZE = 5</h3>
+
+      <div class="front_rear">
+        <div class="front">
+          <span>Front:</span> <span id="frontValue">-</span>
+        </div>
+        <div class="rear">
+          <span>Rear:</span> <span id="rearValue">-</span>
+        </div>
+      </div>
+
+      <div class="queue-container">
+        <div class="queue-box">
+          <div class="queue" id="queue"></div>
+        </div>
+        <div class="index-container" id="index-container"></div> 
+      </div>
+
+      <div class="controls">
+        <input type="text" id="queueInput" placeholder="Enter value">
+        <button id="enqueueBtn">Enqueue</button>
+        <button id="dequeueBtn">Dequeue</button>
+      </div>
+      <p id="message"></p>
+    </div>
+
+    <div class="algorithms">
+      <div class="algorithm-container">
+        <h4>Enqueue Algorithm</h4>
+        <h5>Time Complexity: O(1)</h5>  
+        <pre>
+Algorithm Enqueue(queue, rear, maxSize, newElement):
+    if rear >= maxSize:
+        print "Queue Overflow"
+        return
+    queue[rear] = newElement
+    rear = rear + 1
+        </pre>
+      </div>
+      
+      <div class="algorithm-container">
+        <h4>Dequeue Algorithm</h4>
+        <h5>Time Complexity: O(1)</h5>  
+        <pre>
+Algorithm Dequeue(queue, front, rear):
+    if front == rear:
+        print "Queue Underflow"
+        return None
+    element = queue[front]
+    front = front + 1
+    return element
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="queue.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Visualizer</title>
+  <link rel="stylesheet" href="queue.css">
+</head>
+<body>
+  <div class="container">
+    <div class="visualizer">
+      <h1>QUEUE OPERATIONS</h1>
+      <h3>QUEUE SIZE = 5</h3>
+
+      <div class="front_rear">
+        <div class="front">
+          <span>Front:</span> <span id="frontValue">-</span>
+        </div>
+        <div class="rear">
+          <span>Rear:</span> <span id="rearValue">-</span>
+        </div>
+      </div>
+
+      <div class="queue-container">
+        <div class="queue-box">
+          <div class="queue" id="queue"></div>
+        </div>
+        <div class="index-container" id="index-container"></div> 
+      </div>
+
+      <div class="controls">
+        <input type="text" id="queueInput" placeholder="Enter value">
+        <button id="enqueueBtn">Enqueue</button>
+        <button id="dequeueBtn">Dequeue</button>
+        <button id="clearBtn">Clear Array</button> <!-- New Clear Button -->
+      </div>
+    </div>
+    <div class="algorithms">
+      <div class="algorithm-container">
+        <h4>Enqueue Algorithm</h4>
+        <h5>Time Complexity: O(1)</h5>  
+        <pre>
+Algorithm Enqueue(queue, rear, maxSize, newElement):
+    if rear >= maxSize:
+        print "Queue Overflow"
+        return
+    queue[rear] = newElement
+    rear = rear + 1
+        </pre>
+      </div>
+      
+      <div class="algorithm-container">
+        <h4>Dequeue Algorithm</h4>
+        <h5>Time Complexity: O(1)</h5>  
+        <pre>
+Algorithm Dequeue(queue, front, rear):
+    if front == rear:
+        print "Queue Underflow"
+        return None
+    element = queue[front]
+    front = front + 1
+    return element
+        </pre>
+      </div>
+    </div>
+  
+    <script src="queue.js"></script>
+  </body>
+  </html>

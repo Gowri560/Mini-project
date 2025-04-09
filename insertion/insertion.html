@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort Visualization</title>
+    <link rel="stylesheet" href="insertion.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Sorting Visualization -->
+        <div class="left-section">
+            <h2>INSERTION SORT VISUALIZER</h2>
+            <div class="controls">
+                <input type="text" id="arrayInput" placeholder="Enter numbers (comma separated)">
+                <button onclick="generateArray()">Generate Bars</button>
+                <button onclick="insertionSort()">Start Sorting</button>
+                <br>
+                <label for="speedRange">Speed:</label>
+                <input type="range" id="speedRange" min="50" max="1000" value="300" step="50">
+                <span id="speedValue">300ms</span>
+            </div>
+            
+            <div class="bar-container" id="barContainer"></div>
+            <div class="number-container" id="numberContainer"></div>
+
+            <div class="legend">
+                <h4>Color Legend:</h4>
+                <div class="legend-container">
+                    <span class="legend-item"><span class="legend-box default"></span> Default</span>
+                    <span class="legend-item"><span class="legend-box comparing"></span> Comparing</span>
+                    <span class="legend-item"><span class="legend-box sorted"></span> Sorted</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section: Algorithm & Sorting Steps -->
+        <div class="right-section">
+            <div class="algorithm">
+                <h3>Insertion Sort Algorithm</h3>
+                <p><strong>Time Complexity:</strong> O(n²)</p>
+                <pre>
+Algorithm InsertionSort(arr):
+    for i = 1 to arr.length - 1:
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j = j - 1
+        arr[j + 1] = key
+                </pre>
+            </div>
+            <div class="sorting-steps">
+                <h3>Sorting Process</h3>
+                <p>Each step of the sorting process will be displayed below:</p>
+                <div id="sortingSteps"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="working">
+        <h3>Working of Insertion Sort</h3>
+        <p><strong>Start from the second element:</strong> The first element is already considered sorted.</p>
+        <p><strong>Pick the current element:</strong> Compare it with the elements in the sorted part (left side).</p>
+        <p><strong>Shift larger elements:</strong> Move elements greater than the picked element one position to the right.</p>
+        <p><strong>Insert the element:</strong> Place the picked element in its correct position within the sorted part.</p>
+        <p><strong>Repeat for all elements:</strong> Continue this process until the entire array is sorted.</p>
+    </div>
+    
+    <script src="insertion.js"></script>
+</body>
+</html>

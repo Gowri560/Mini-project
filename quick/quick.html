@@ -1,0 +1,137 @@
+<!---DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort Visualizer</title>
+    <link rel="stylesheet" href="quick.css">
+</head>
+<body>
+    <h2>QUICK SORT VISUALIZER</h2>
+
+    <div class="container">
+        <div class="controls">
+            <input type="text" id="arrayInput" placeholder="Enter numbers (comma separated)">
+            <button onclick="generateArray()">Generate Bars</button>
+            <button onclick="quickSort()">Start Sorting</button>
+            <br>
+            <label for="speedRange">Speed:</label>
+            <input type="range" id="speedRange" min="50" max="1000" value="300" step="50">
+            <span id="speedValue">300ms</span>
+        </div>
+
+        <div class="bar-container" id="barContainer"></div>
+        <div class="number-container" id="numberContainer"></div>
+    </div>
+
+    <div class="algorithm">
+        <h3>Quick Sort Algorithm</h3>
+        <p><strong>Time Complexity:</strong> O(n log n)</p>
+        <pre>
+Algorithm QuickSort(arr, low, high):
+    if low < high:
+        pivotIndex = partition(arr, low, high)
+        QuickSort(arr, low, pivotIndex - 1)
+        QuickSort(arr, pivotIndex + 1, high)
+
+Algorithm partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j = low to high - 1:
+        if arr[j] < pivot:
+            i++
+            swap(arr[i], arr[j])
+    swap(arr[i + 1], arr[high])
+    return i + 1
+        </pre>
+    </div>
+
+    <div class="explanation">
+        <h3>Sorting Process</h3>
+        <p>Each step of the sorting process will be displayed below:</p>
+        <div id="sortingSteps"></div>
+    </div>
+
+    <script src="quick.js"></script>
+</body>
+</html--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort Visualization</title>
+    <link rel="stylesheet" href="quick.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side: Sorting Visualization -->
+        <div class="left-section">
+            <h2>QUICK SORT VISUALIZER</h2>
+            <div class="controls">
+                <input type="text" id="arrayInput" placeholder="Enter numbers (comma separated)">
+                <button onclick="generateArray()">Generate Bars</button>
+                <button onclick="quickSort()">Start Sorting</button>
+                <br>
+                <label for="speedRange">Speed:</label>
+                <input type="range" id="speedRange" min="50" max="1000" value="300" step="50">
+                <span id="speedValue">300ms</span>
+            </div>
+
+            <div class="bar-container" id="barContainer"></div>
+            <div class="number-container" id="numberContainer"></div>
+
+            <div class="legend">
+                <h4>Color Legend:</h4>
+                <div class="legend-container">
+                    <span class="legend-item"><span class="legend-box default"></span> Default</span>
+                    <span class="legend-item"><span class="legend-box swapping"></span> Swapping</span>
+                    <span class="legend-item"><span class="legend-box sorted"></span> Sorted</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Algorithm & Sorting Process -->
+        <div class="right-section">
+            <div class="algorithm">
+                <h3>Quick Sort Algorithm</h3>
+                <p><strong>Time Complexity:</strong> O(n log n)</p>
+                <pre>
+Algorithm QuickSort(arr, low, high):
+    if low < high:
+        pivotIndex = partition(arr, low, high)
+        QuickSort(arr, low, pivotIndex - 1)
+        QuickSort(arr, pivotIndex + 1, high)
+
+Algorithm partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j = low to high - 1:
+        if arr[j] < pivot:
+            i++
+            swap(arr[i], arr[j])
+    swap(arr[i + 1], arr[high])
+    return i + 1
+                </pre>
+            </div>
+
+            <div class="sorting-steps">
+                <h3>Sorting Process</h3>
+                <p>Each step of the sorting process will be displayed below:</p>
+                <div id="sortingSteps"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="working">
+        <h3>Working of Quick Sort</h3>
+        <p><strong>Choose a pivot:</strong> Select an element as the pivot (usually the last element).</p>
+        <p><strong>Partition:</strong> Rearrange the array so elements smaller than the pivot are left and greater ones are right.</p>
+        <p><strong>Recursively apply:</strong> Apply the same process to the left and right subarrays.</p>
+        <p><strong>Base case:</strong> The recursion stops when subarrays have a single element or are empty.</p>
+    </div>
+
+    <script src="quick.js"></script>
+</body>
+</html>

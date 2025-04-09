@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+input {
+    width: 250px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+.bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 300px;
+    margin: 20px 0;
+}
+
+.bar {
+    width: 30px;
+    margin: 3px;
+    background-color: rgb(7, 7, 136);
+    transition: 0.3s;
+}
+
+.merging {
+    background-color: rgb(255, 140, 0);
+}
+
+.sorted {
+    background-color: rgb(255, 255, 255);
+}
+
+.number-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.number {
+    width: 30px;
+    margin: 3px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.explanation {
+    background-color: #222;
+    padding: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 600px;
+}
+
+#sortingSteps {
+    font-size: 16px;
+    background: #111;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.algorithm {
+    background-color: #222;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid #444;
+    max-width: 700px;
+    text-align: left;
+}
+
+.algorithm pre {
+    background: #111;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}

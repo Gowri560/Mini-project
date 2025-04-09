@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;  /* Centers content vertically */
+    height: 100vh;
+    flex-direction: row;  /* Keep both containers side by side */
+    padding: 40px;
+    gap: 30px;  /* Add gap between the two containers */
+}
+
+.container, .algorithm-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%;  /* Set width to 45% for equal size with algorithm container */
+    min-width: 350px;  /* Ensure containers don't shrink too small */
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically inside the container */
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;  /* Stack input fields and buttons vertically */
+    gap: 20px;  /* Space between inputs and buttons */
+    margin-bottom: 20px;  /* Margin at the bottom */
+}
+
+.array-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.box {
+    width: 60px;  /* Slightly increase the box size */
+    height: 60px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    font-size: 20px;  /* Increase font size */
+    background-color: white;
+    transition: 0.3s;
+}
+
+.highlight {
+    background-color: rgb(167, 167, 244);
+}
+
+.found {
+    background-color: grey;
+}
+
+input, button {
+    padding: 12px;
+    font-size: 1.2em;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 1.1em;  /* Increase font size for better readability */
+    color: #333;
+    text-align: left;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}

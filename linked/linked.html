@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List Visualizer</title>
+    <link rel="stylesheet" href="linked.css">
+</head>
+<body>
+    <div class="container">
+        <h2>LINKED LIST OPERATIONS</h2>
+        <div class="controls">
+            <input type="text" id="nodeValue" placeholder="Enter value">
+            <button onclick="insertAtBeginning()">Insert Beginning</button>
+            <button onclick="insertAtEnd()">Insert End</button>
+            <button onclick="insertAtPosition()">Insert at Position</button>
+            <button onclick="deleteFromBeginning()">Delete Beginning</button>
+            <button onclick="deleteFromEnd()">Delete End</button>
+            <button onclick="deleteAtPosition()">Delete at Position</button>
+            <button onclick="searchNode()">Search</button>
+        </div>
+        <div class="list-container" id="listContainer"></div>
+
+        <div class="algorithm-container">
+            <h3>Algorithm</h3>
+            <pre id="algorithm">Click an operation to view its algorithm.</pre>
+        </div>
+    </div>
+
+    <script src="linked.js"></script>
+</body>
+</html>

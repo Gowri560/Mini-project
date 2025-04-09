@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack Visualizer</title>
+  <link rel="stylesheet" href="stack.css">
+</head>
+<body>
+  <div class="container">
+    <div class="visualizer">
+      <h1>STACK OPERATIONS</h1>
+      <h3>STACK SIZE = 5</h3>
+
+      <div class="stack-container">
+        <div class="pointer" id="pointer">TOP →</div>
+        <div class="stack" id="stack"></div>
+      </div>
+
+      <div class="controls">
+        <div class="text_box">
+          <input type="text" id="stackInput" placeholder="Enter value">
+        </div>
+        <div class="push_pop">
+          <button id="pushBtn">Push</button>
+          <button id="popBtn">Pop</button>
+        </div>
+      </div>
+      <p id="message"></p>
+    </div>
+
+    <div class="algorithms">
+      <div class="algorithm-container">
+        <h4>Push Algorithm</h4>
+        <h5>Time Complexity: O(1)</h5>  
+        <pre>
+Algorithm Push(stack, top, maxSize, newElement):
+    if top >= maxSize - 1:
+        print "Stack Overflow"
+        return
+    top = top + 1
+    stack[top] = newElement
+        </pre>
+      </div>
+      
+      <div class="algorithm-container">
+        <h4>Pop Algorithm</h4>
+        <h5>Time Complexity: O(1)</h5>  
+        <pre>
+Algorithm Pop(stack, top):
+    if top < 0:
+        print "Stack Underflow"
+        return None
+    element = stack[top]
+    top = top - 1
+    return element
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="stack.js"></script>
+</body>
+</html>

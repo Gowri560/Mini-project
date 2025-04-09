@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort Visualization</title>
+    <link rel="stylesheet" href="selection.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Sorting Visualization -->
+        <div class="left-section">
+            <h2>SELECTION SORT VISUALIZER</h2>
+            <div class="controls">
+                <input type="text" id="arrayInput" placeholder="Enter numbers (comma separated)">
+                <button onclick="generateArray()">Generate Bars</button>
+                <button onclick="selectionSort()">Start Sorting</button>
+                <br>
+                <label for="speedRange">Speed:</label>
+                <input type="range" id="speedRange" min="50" max="1000" value="300" step="50">
+                <span id="speedValue">300ms</span>
+            </div>
+            <div class="bar-container" id="barContainer"></div>
+            <div class="number-container" id="numberContainer"></div>
+            
+            <!-- Color Legend -->
+            <div class="legend">
+                <h4>Color Legend:</h4>
+                <div class="legend-container">
+                    <span class="legend-item"><span class="legend-box default"></span> Default</span>
+                    <span class="legend-item"><span class="legend-box selecting"></span> Selecting</span>
+                    <span class="legend-item"><span class="legend-box swapping"></span> Swapping</span>
+                    <span class="legend-item"><span class="legend-box sorted"></span> Sorted</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section: Algorithm & Sorting Process -->
+        <div class="right-section">
+            <div class="algorithm">
+                <h3>Selection Sort Algorithm</h3>
+                <p><strong>Time Complexity:</strong> O(n²)</p>
+                <pre>
+Algorithm SelectionSort(arr):
+    for i = 0 to arr.length - 1:
+        minIndex = i
+        for j = i+1 to arr.length:
+            if arr[j] < arr[minIndex]:
+                minIndex = j
+        swap(arr[i], arr[minIndex])
+                </pre>
+            </div>
+
+            <div class="sorting-steps">
+                <h3>Sorting Process</h3>
+                <p>Each step of the sorting process will be displayed below:</p>
+                <div id="sortingSteps"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="working">
+        <h3>Working of Selection Sort</h3>
+        <p><strong>Find the smallest element:</strong> Start from the first element and look for the smallest element in the entire list.</p>
+        <p><strong>Swap with the first element:</strong> Once the smallest element is found, swap it with the first element of the list.</p>
+        <p><strong>Move to the next position:</strong> Now, consider the remaining list (excluding the first element that is already sorted) and repeat the process.</p>
+        <p><strong>Repeat for the entire list:</strong> Continue finding the smallest element and swapping it with the current position until all elements are sorted.</p>
+        <p><strong>End when the entire list is sorted:</strong> The algorithm finishes once all the elements have been sorted in their correct positions.</p>
+    </div>
+    
+    <script src="selection.js"></script>
+</body>
+</html>

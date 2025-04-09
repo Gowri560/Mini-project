@@ -1,0 +1,182 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container - Two Column Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Section: Sorting Visualization */
+.left-section {
+    flex: 1.2;
+    text-align: center;
+}
+
+/* Right Section: Algorithm & Sorting Steps */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Algorithm Box */
+.algorithm, .sorting-steps {
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Sorting Bars Styling */
+.bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 300px;
+    margin: 20px 0;
+}
+
+.bar {
+    width: 30px;
+    margin: 3px;
+    background-color: rgb(7, 7, 136);
+    transition: 0.3s;
+}
+
+/* Highlighting Swaps */
+.swapping {
+    background-color: rgb(104, 12, 12);
+}
+
+/* Sorted Bar Color */
+.sorted {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Number labels under bars */
+.number-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.number {
+    width: 30px;
+    margin: 3px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Controls Section */
+.controls {
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+input {
+    width: 250px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Algorithm & Sorting Steps Styling */
+pre {
+    text-align: left;
+    background: #111;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#sortingSteps {
+    font-size: 16px;
+    background: #111;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+/* Legend Section */
+.legend {
+    margin-top: 20px;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.legend-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+/* Colors matching the bars */
+.legend-box.default {
+    background-color: rgb(7, 7, 136);
+}
+
+.legend-box.comparing {
+    background-color: rgb(104, 12, 12);
+}
+
+.legend-box.sorted {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #888;
+}
+
+.working {
+    background-color: #222;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 800px;
+}
